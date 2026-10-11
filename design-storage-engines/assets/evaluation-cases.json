@@ -1,0 +1,32 @@
+{
+  "skill": "design-storage-engines",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Design a log-backed key-value store and define whether an acknowledged write survives a crash between data append and manifest update.",
+      "expected": [
+        "State acknowledgement and flush ordering.",
+        "Enumerate crash windows.",
+        "Verify recovery with a reference map."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Atomically rename a manifest and assume both manifest and newly created data files are durable.",
+      "expected": [
+        "Check file/directory flush requirements.",
+        "Avoid equating atomic visibility with crash durability."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-storage-engines to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

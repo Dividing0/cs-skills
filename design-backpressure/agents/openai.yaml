@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Backpressure"
+  short_description: "Specify and validate backpressure"
+  default_prompt: "Use $design-backpressure to analyze my task, state assumptions, and deliver a validated result."

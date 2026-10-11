@@ -1,0 +1,32 @@
+{
+  "skill": "analyze-consensus-protocols",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Review a Raft implementation that commits an older-term entry solely because it appears on a majority after a new election.",
+      "expected": [
+        "Apply the exact current-term commit rule.",
+        "Trace a leader-change counterexample if applicable.",
+        "Distinguish commit safety from eventual progress."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "A timeout has expired, so the old leader is certainly dead and cannot serve stale reads.",
+      "expected": [
+        "Reject failure certainty from timeout.",
+        "Specify read authority/quorum or justified lease conditions."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use analyze-consensus-protocols to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Computer Graphics"
+  short_description: "Specify and validate computer graphics"
+  default_prompt: "Use $design-computer-graphics to analyze my task, state assumptions, and deliver a validated result."

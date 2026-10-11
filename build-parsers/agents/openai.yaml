@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Parsers"
+  short_description: "Specify and validate parsers"
+  default_prompt: "Use $build-parsers to analyze my task, state assumptions, and deliver a validated result."

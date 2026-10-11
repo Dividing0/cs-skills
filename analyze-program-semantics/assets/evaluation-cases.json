@@ -1,0 +1,32 @@
+{
+  "skill": "analyze-program-semantics",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Assess whether replacing f()+g() with g()+f() preserves behavior when both functions mutate shared state.",
+      "expected": [
+        "Specify sequencing and observable state.",
+        "Give a counterexample or sufficient effect assumptions.",
+        "Avoid pure algebraic reasoning for effects."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Both programs return 3 on ten inputs. Prove contextual equivalence.",
+      "expected": [
+        "Reject a universal conclusion from samples.",
+        "Define observables and either prove refinement or present bounded results."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use analyze-program-semantics to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Program Semantics"
+  short_description: "Specify and validate program semantics"
+  default_prompt: "Use $analyze-program-semantics to analyze my task, state assumptions, and deliver a validated result."

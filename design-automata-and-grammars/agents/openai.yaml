@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Automata And Grammars"
+  short_description: "Specify and validate automata and grammars"
+  default_prompt: "Use $design-automata-and-grammars to analyze my task, state assumptions, and deliver a validated result."

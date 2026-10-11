@@ -1,0 +1,32 @@
+{
+  "skill": "design-streaming-algorithms",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Estimate URL frequencies using 2 MiB of memory with an insertion-only Count-Min sketch and compare to exact prefix counts.",
+      "expected": [
+        "State epsilon/delta and hash assumptions.",
+        "Check overestimation and merge parameters.",
+        "Handle counter overflow and empty streams."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Subtract arbitrary deletes from an insertion-only sketch and retain its original overestimation guarantee.",
+      "expected": [
+        "Identify the changed stream model.",
+        "Require a valid turnstile guarantee or reject the claimed bound."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-streaming-algorithms to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

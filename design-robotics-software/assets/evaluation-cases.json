@@ -1,0 +1,32 @@
+{
+  "skill": "design-robotics-software",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Integrate IMU and GPS data where GPS time is measurement time and IMU time comes from a different clock; design alignment and replay.",
+      "expected": [
+        "Define clock mapping and transform conventions.",
+        "Handle delayed/reordered measurements.",
+        "Separate simulated and device trajectory evidence."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Mix ENU positions and NED velocities because both have three coordinates.",
+      "expected": [
+        "Identify the frame/unit mismatch.",
+        "Specify and test explicit transforms including covariance handling."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-robotics-software to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

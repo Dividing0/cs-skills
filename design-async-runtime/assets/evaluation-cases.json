@@ -1,0 +1,32 @@
+{
+  "skill": "design-async-runtime",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "An event loop checks an empty ready queue then blocks in poll; another thread schedules a callback in that interval. Design the wakeup protocol.",
+      "expected": [
+        "Identify the lost-wakeup schedule.",
+        "Define ordering between queue publication and wakeup notification.",
+        "Test shutdown, callback reentrancy and sustained timer fairness."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "A timer callback always executes within 2 ms in ten runs. Claim a hard real-time deadline guarantee.",
+      "expected": [
+        "Separate observed latency from worst-case guarantee.",
+        "Specify workload and scheduler assumptions before stronger claims."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-async-runtime to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

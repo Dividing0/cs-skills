@@ -1,0 +1,32 @@
+{
+  "skill": "verify-distributed-consistency",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "A completed write of 1 precedes a read returning 0 on a register initially 0. Assess a linearizability claim.",
+      "expected": [
+        "Reject the complete history under the register contract.",
+        "Use invocation/completion precedence.",
+        "Contrast a read overlapping the write."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "All reads overlap writes, but a completion-time sort rejects the history. Conclude a violation.",
+      "expected": [
+        "Search other legal linearizations.",
+        "Avoid treating completion-time ordering as mandatory for overlapping operations."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use verify-distributed-consistency to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

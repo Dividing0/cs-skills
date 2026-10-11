@@ -1,0 +1,38 @@
+{
+  "left": {
+    "states": [
+      "s",
+      "t"
+    ],
+    "alphabet": [
+      "a"
+    ],
+    "start": "s",
+    "accept": [
+      "t"
+    ],
+    "transitions": {
+      "s": {
+        "a": "t"
+      },
+      "t": {
+        "a": "t"
+      }
+    }
+  },
+  "right": {
+    "states": [
+      "s"
+    ],
+    "alphabet": [
+      "a"
+    ],
+    "start": "s",
+    "accept": [],
+    "transitions": {
+      "s": {
+        "a": "s"
+      }
+    }
+  }
+}

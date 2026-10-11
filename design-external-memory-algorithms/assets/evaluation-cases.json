@@ -1,0 +1,32 @@
+{
+  "skill": "design-external-memory-algorithms",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Sort 500 GB of variable-length JSONL records with 4 GB RAM and at most 128 open files.",
+      "expected": [
+        "Budget run formation and merge fan-in.",
+        "Bound temporary disk usage and descriptors.",
+        "Check malformed records and failure cleanup."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Read records lazily, convert the iterator to a list, and claim the sort uses bounded memory.",
+      "expected": [
+        "Locate materialization and object-size costs.",
+        "Replace with bounded runs and multi-pass merge."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-external-memory-algorithms to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

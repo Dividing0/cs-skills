@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Memory Lifecycles"
+  short_description: "Specify and validate memory lifecycles"
+  default_prompt: "Use $analyze-memory-lifecycles to analyze my task, state assumptions, and deliver a validated result."

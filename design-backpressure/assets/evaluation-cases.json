@@ -1,0 +1,32 @@
+{
+  "skill": "design-backpressure",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "A crawler accepts 1000 URLs/s but persists 600/s. Design behavior for a ten-minute overload and a stalled database.",
+      "expected": [
+        "Calculate unbounded backlog growth before choosing capacity.",
+        "Specify byte limits and a loss/admission contract.",
+        "Verify shutdown and permit release."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Add a queue capacity of 1000 and claim the complete pipeline now has bounded memory.",
+      "expected": [
+        "Inspect hidden/in-flight buffers and payload sizes.",
+        "Explain what resource bound is actually established."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-backpressure to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

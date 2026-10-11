@@ -1,0 +1,32 @@
+{
+  "skill": "design-data-structures",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Design a deadline queue supporting insertion, cancellation and next-deadline retrieval for an event loop.",
+      "expected": [
+        "Specify cancellation ownership and handle identity.",
+        "Compare heap tombstones with indexed removal.",
+        "Test operation sequences and cleanup costs."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Dynamic-array append is amortized constant time, so every append meets a fixed microsecond deadline.",
+      "expected": [
+        "Distinguish amortized cost from worst-case latency.",
+        "Account for resizing, allocation and allocator behavior."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-data-structures to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

@@ -1,0 +1,32 @@
+{
+  "skill": "build-parsers",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Build a Pratt parser for arithmetic with unary minus, right-associative exponentiation and source-span errors.",
+      "expected": [
+        "Specify precedence with examples such as unary versus exponentiation.",
+        "Reject trailing tokens.",
+        "Test truncated and deeply nested input."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "The parser accepts 1+2garbage because it parsed a valid prefix. Treat the document as valid.",
+      "expected": [
+        "Require full-input consumption.",
+        "Emit a location-aware trailing-token error."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use build-parsers to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

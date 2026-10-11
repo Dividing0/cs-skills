@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Programs Statically"
+  short_description: "Specify and validate programs statically"
+  default_prompt: "Use $analyze-programs-statically to analyze my task, state assumptions, and deliver a validated result."

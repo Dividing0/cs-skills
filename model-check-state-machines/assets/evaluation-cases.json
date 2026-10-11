@@ -1,0 +1,32 @@
+{
+  "skill": "model-check-state-machines",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Model a bounded queue with producers, consumers and shutdown. Check queue bounds and whether every accepted item eventually leaves the queue.",
+      "expected": [
+        "Separate finite safety exploration from temporal liveness.",
+        "Specify fairness and shutdown treatment.",
+        "Report an explicit transition trace for a violation."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "A BFS visits 1000 states before a configured cap and finds no bad state. Report the protocol fully verified.",
+      "expected": [
+        "Return unknown/truncated exploration.",
+        "State the explored bounds and remaining proof obligation."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use model-check-state-machines to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

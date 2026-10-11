@@ -1,0 +1,32 @@
+{
+  "skill": "design-fault-tolerant-systems",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "A payment request times out after the remote side may have committed. Design retry and recovery behavior.",
+      "expected": [
+        "Use stable operation identity and uncertain completion states.",
+        "Avoid duplicate effects through a defined atomic/idempotent contract.",
+        "Specify reconciliation and expiry."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Keep an idempotency key only in process memory and promise duplicate protection across crashes.",
+      "expected": [
+        "Expose the durability gap.",
+        "Specify persistent deduplication scope and retention."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-fault-tolerant-systems to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Computer Architecture"
+  short_description: "Specify and validate computer architecture"
+  default_prompt: "Use $analyze-computer-architecture to analyze my task, state assumptions, and deliver a validated result."

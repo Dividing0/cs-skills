@@ -1,0 +1,32 @@
+{
+  "skill": "design-real-time-systems",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Assess preemptive single-core periodic tasks with implicit deadlines and execution/period pairs (2,5), (3,10), (1,20) in milliseconds.",
+      "expected": [
+        "State the independent-task/no-blocking assumptions.",
+        "Calculate utilization and choose an applicable test.",
+        "Account for overhead before deployment guarantees."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Observed maximum latency is 4 ms in a ten-minute run, so guarantee a 5 ms deadline.",
+      "expected": [
+        "Report empirical maximum with workload conditions.",
+        "Require an appropriate worst-case timing argument."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-real-time-systems to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

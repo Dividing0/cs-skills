@@ -1,0 +1,32 @@
+{
+  "skill": "research-computability",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Can an analyzer decide whether any arbitrary Python program terminates? Contrast a finite transition system with bounded memory.",
+      "expected": [
+        "Define model and input encoding.",
+        "Give a valid halting reduction.",
+        "Explain why finite-state reachability differs."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "A parser always finishes on tested inputs, so membership in any grammar is decidable by that implementation.",
+      "expected": [
+        "Reject sample-based decidability claims.",
+        "Require a terminating procedure over all legal inputs and a sound/correct recognition argument."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use research-computability to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

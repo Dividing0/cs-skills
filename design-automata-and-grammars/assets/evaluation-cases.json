@@ -1,0 +1,32 @@
+{
+  "skill": "design-automata-and-grammars",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Construct a DFA over a,b for words with an even number of a characters and ending in b; compare it to a proposed four-state machine.",
+      "expected": [
+        "Define state meanings and empty-word outcome.",
+        "Check a shortest distinguishing word if unequal.",
+        "Make all transitions explicit."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Enumerate words up to length 8 and claim two arbitrary context-free grammars are equivalent.",
+      "expected": [
+        "Label bounded evidence only.",
+        "Explain the limits of grammar equivalence testing."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-automata-and-grammars to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

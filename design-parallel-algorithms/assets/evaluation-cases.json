@@ -1,0 +1,32 @@
+{
+  "skill": "design-parallel-algorithms",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Parallelize feature extraction across recordings of uneven duration and then reduce statistics.",
+      "expected": [
+        "Model load imbalance and critical path.",
+        "Specify reduction precision/determinism.",
+        "Measure throughput and memory by worker count."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Run four threads on a task with a large serial phase and assume a fourfold speedup.",
+      "expected": [
+        "Apply serial/work/span limits.",
+        "Measure scheduling and bandwidth constraints."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-parallel-algorithms to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

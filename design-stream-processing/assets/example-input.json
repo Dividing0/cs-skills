@@ -1,0 +1,17 @@
+[
+  {
+    "id": "a",
+    "key": "sensor",
+    "time": 0
+  },
+  {
+    "id": "b",
+    "key": "sensor",
+    "time": 5
+  },
+  {
+    "id": "a",
+    "key": "sensor",
+    "time": 0
+  }
+]

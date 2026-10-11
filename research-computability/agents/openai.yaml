@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Computability"
+  short_description: "Specify and validate computability"
+  default_prompt: "Use $research-computability to analyze my task, state assumptions, and deliver a validated result."

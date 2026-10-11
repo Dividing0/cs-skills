@@ -1,0 +1,25 @@
+{
+  "states": [
+    "idle",
+    "busy",
+    "bad"
+  ],
+  "initial": [
+    "idle"
+  ],
+  "forbidden": [
+    "bad"
+  ],
+  "transitions": [
+    {
+      "from": "idle",
+      "to": "busy",
+      "label": "start"
+    },
+    {
+      "from": "busy",
+      "to": "bad",
+      "label": "failure"
+    }
+  ]
+}

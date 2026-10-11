@@ -1,0 +1,32 @@
+{
+  "skill": "evaluate-machine-learning-systems",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Compare two Ukrainian ASR models on recordings from speakers also present in training; redesign the evaluation.",
+      "expected": [
+        "Identify speaker and near-duplicate leakage.",
+        "Define independent held-out evaluation.",
+        "Report paired quality and inference conditions."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Bootstrap 10000 frames from ten recordings as independent samples and claim a narrow confidence interval.",
+      "expected": [
+        "Choose the independent resampling unit.",
+        "Explain dependence and sample-size limits."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use evaluate-machine-learning-systems to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

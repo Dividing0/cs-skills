@@ -1,0 +1,32 @@
+{
+  "skill": "analyze-memory-lifecycles",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "A timer heap retains 20000 cancelled callbacks behind an earlier active timer. Each callback owns a payload and a context variable references another object. Diagnose release semantics.",
+      "expected": [
+        "Construct weak-reference observations for callback, args and context payloads.",
+        "Distinguish queue bookkeeping from Python payload ownership.",
+        "Test repeated cancellation and reentrant finalization."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "After all weak references die, RSS remains high. Declare the library has a leak and force allocator replacement.",
+      "expected": [
+        "Reject the unsupported leak conclusion.",
+        "Investigate allocator residency/native allocations and repeat workload measurements."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use analyze-memory-lifecycles to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

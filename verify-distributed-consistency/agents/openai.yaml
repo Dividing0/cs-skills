@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify Distributed Consistency"
+  short_description: "Specify and validate distributed consistency"
+  default_prompt: "Use $verify-distributed-consistency to analyze my task, state assumptions, and deliver a validated result."

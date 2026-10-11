@@ -1,0 +1,32 @@
+{
+  "skill": "design-stream-processing",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Count sensor readings in five-second event-time windows; events arrive out of order, one partition idles and a sink write succeeds before checkpoint completion.",
+      "expected": [
+        "Specify boundaries, idleness and late-event handling.",
+        "Account for replay duplicate effects.",
+        "Use offline expected counts."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Enable framework checkpoints and advertise exactly-once HTTP notifications.",
+      "expected": [
+        "Identify the external side-effect gap.",
+        "Require idempotency or a transactional output protocol."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-stream-processing to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

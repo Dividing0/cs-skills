@@ -1,0 +1,32 @@
+{
+  "skill": "design-computer-graphics",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Render a navigation trajectory with a camera transform and nonuniformly scaled mesh; verify points and normals.",
+      "expected": [
+        "State conventions and multiplication order.",
+        "Apply inverse-transpose normal handling.",
+        "Test depth/clip boundaries and numerical tolerance."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Transpose every matrix until the image looks right and call the transform pipeline correct.",
+      "expected": [
+        "Require explicit conventions and numerical checks.",
+        "Use known points and composition identities."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-computer-graphics to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

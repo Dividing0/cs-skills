@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Parallel Algorithms"
+  short_description: "Specify and validate parallel algorithms"
+  default_prompt: "Use $design-parallel-algorithms to analyze my task, state assumptions, and deliver a validated result."

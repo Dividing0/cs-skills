@@ -1,0 +1,32 @@
+{
+  "skill": "design-speech-processing-systems",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Design an 8 kHz Ukrainian telephone pipeline with denoising, VAD and streaming ASR under a 300 ms partial-result budget.",
+      "expected": [
+        "Account for lookahead, framing and queue delays.",
+        "Keep timestamps through resampling.",
+        "Evaluate WER and latency on telephone recordings."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Convert 8 kHz audio to 48 kHz and call it maximum-quality restored audio.",
+      "expected": [
+        "Distinguish representation conversion from recovered information.",
+        "Preserve provenance and evaluate downstream quality."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-speech-processing-systems to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

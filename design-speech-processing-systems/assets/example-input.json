@@ -1,0 +1,14 @@
+{
+  "sample_rate": 8000,
+  "channels": 1,
+  "sample_bytes": 2,
+  "frame_ms": 20,
+  "stages": [
+    {
+      "name": "asr",
+      "lookahead_ms": 80,
+      "processing_ms": 15,
+      "queue_ms": 5
+    }
+  ]
+}

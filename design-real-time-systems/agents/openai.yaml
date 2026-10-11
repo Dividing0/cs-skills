@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Real Time Systems"
+  short_description: "Specify and validate real time systems"
+  default_prompt: "Use $design-real-time-systems to analyze my task, state assumptions, and deliver a validated result."

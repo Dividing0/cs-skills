@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Check State Machines"
+  short_description: "Specify and validate check state machines"
+  default_prompt: "Use $model-check-state-machines to analyze my task, state assumptions, and deliver a validated result."

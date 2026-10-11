@@ -1,0 +1,14 @@
+[
+  {
+    "id": "speaker1",
+    "errors_a": 10,
+    "errors_b": 8,
+    "units": 100
+  },
+  {
+    "id": "speaker2",
+    "errors_a": 20,
+    "errors_b": 19,
+    "units": 150
+  }
+]

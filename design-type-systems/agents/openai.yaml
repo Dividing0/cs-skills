@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Type Systems"
+  short_description: "Specify and validate type systems"
+  default_prompt: "Use $design-type-systems to analyze my task, state assumptions, and deliver a validated result."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Speech Processing Systems"
+  short_description: "Specify and validate speech processing systems"
+  default_prompt: "Use $design-speech-processing-systems to analyze my task, state assumptions, and deliver a validated result."

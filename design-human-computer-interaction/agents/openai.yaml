@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Human Computer Interaction"
+  short_description: "Specify and validate human computer interaction"
+  default_prompt: "Use $design-human-computer-interaction to analyze my task, state assumptions, and deliver a validated result."

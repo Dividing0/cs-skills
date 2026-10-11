@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Data Structures"
+  short_description: "Specify and validate data structures"
+  default_prompt: "Use $design-data-structures to analyze my task, state assumptions, and deliver a validated result."

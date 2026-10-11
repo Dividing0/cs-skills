@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Streaming Algorithms"
+  short_description: "Specify and validate streaming algorithms"
+  default_prompt: "Use $design-streaming-algorithms to analyze my task, state assumptions, and deliver a validated result."

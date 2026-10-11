@@ -1,0 +1,32 @@
+{
+  "skill": "design-information-retrieval",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "Build search over Ukrainian court decisions with date filters, access rules and a 200 ms budget. Compare BM25 and hybrid retrieval.",
+      "expected": [
+        "Establish judged queries and a baseline.",
+        "Evaluate recall and final ranking separately.",
+        "Measure freshness, ACL correctness and latency."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "A dense retriever scores better on the same queries used to tune weights. Declare a production improvement.",
+      "expected": [
+        "Flag evaluation contamination.",
+        "Require held-out queries and cost/latency measurements."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use design-information-retrieval to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

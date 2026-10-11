@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Operating Systems"
+  short_description: "Specify and validate operating systems"
+  default_prompt: "Use $analyze-operating-systems to analyze my task, state assumptions, and deliver a validated result."

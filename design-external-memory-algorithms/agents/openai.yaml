@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design External Memory Algorithms"
+  short_description: "Specify and validate external memory algorithms"
+  default_prompt: "Use $design-external-memory-algorithms to analyze my task, state assumptions, and deliver a validated result."

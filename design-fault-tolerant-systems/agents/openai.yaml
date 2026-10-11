@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Fault Tolerant Systems"
+  short_description: "Specify and validate fault tolerant systems"
+  default_prompt: "Use $design-fault-tolerant-systems to analyze my task, state assumptions, and deliver a validated result."

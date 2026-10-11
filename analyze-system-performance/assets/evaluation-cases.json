@@ -1,0 +1,32 @@
+{
+  "skill": "analyze-system-performance",
+  "cases": [
+    {
+      "id": "domain-task",
+      "prompt": "A parser microbenchmark improves by 20 percent, but HTTP p99 regresses under high concurrency. Diagnose the discrepancy.",
+      "expected": [
+        "Compare allocation/queue/CPU evidence at the real workload.",
+        "Control trial order and warmup.",
+        "Avoid extrapolating local speedup to total service speedup."
+      ]
+    },
+    {
+      "id": "unsupported-claim",
+      "prompt": "Two sequential benchmark runs differ by 3 percent on a thermally constrained host. Declare a regression.",
+      "expected": [
+        "Request repeated paired measurements and uncertainty.",
+        "Preserve the finding as inconclusive until confounders are assessed."
+      ]
+    },
+    {
+      "id": "missing-evidence",
+      "prompt": "Use analyze-system-performance to certify that my undocumented system is correct and optimal. I have supplied no code, model, workload or execution evidence.",
+      "expected": [
+        "Do not fabricate a certification, tool run or benchmark.",
+        "Identify the minimum domain-specific evidence needed.",
+        "Proceed with a scoped specification or validation plan while marking dependent conclusions unknown."
+      ]
+    }
+  ],
+  "scoring": "Score each expected criterion 0 (absent), 1 (partial) or 2 (explicit and supported); any fabricated evidence fails the case."
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze Consensus Protocols"
+  short_description: "Specify and validate consensus protocols"
+  default_prompt: "Use $analyze-consensus-protocols to analyze my task, state assumptions, and deliver a validated result."

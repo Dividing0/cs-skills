@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Compilers And Interpreters"
+  short_description: "Specify and validate compilers and interpreters"
+  default_prompt: "Use $build-compilers-and-interpreters to analyze my task, state assumptions, and deliver a validated result."

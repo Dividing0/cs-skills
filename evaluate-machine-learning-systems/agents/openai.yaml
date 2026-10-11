@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evaluate Machine Learning Systems"
+  short_description: "Specify and validate machine learning systems"
+  default_prompt: "Use $evaluate-machine-learning-systems to analyze my task, state assumptions, and deliver a validated result."

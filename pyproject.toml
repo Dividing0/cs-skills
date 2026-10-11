@@ -11,13 +11,6 @@ dependencies = [
     "ruff>=0.17.0",
 ]
 
-[project.scripts]
-computer-science-skills-38 = "computer_science_skills_38:main"
-
-[build-system]
-requires = ["uv_build>=0.12.5,<0.13.0"]
-build-backend = "uv_build"
-
 [tool.pyright]
 include = ["**/*.py"]
 exclude = ["**/.venv", "**/venv", "**/__pycache__", "build", "dist"]
